@@ -3855,3 +3855,24 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 144ms (Views: 141.7ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/posts" for 70.123.204.236 at 2020-06-26 20:27:24 +0000
+Cannot render console from 70.123.204.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+CGX6FwjHuFEcqJ2rjcXFXKXVDV26NzBMhmuWldd4WuYt07q1eM57GkXXeEjNp4aNKFfL4xMPrxzouOiWRjPA==", "post"=>{"title"=>"My first Post!", "description"=>"This is my very first post! WOW!"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "My First Post!"], ["description", "This is my very first post! WOW!"], ["created_at", "2020-06-26 20:27:24.294721"], ["updated_at", "2020-06-26 20:27:24.294721"]]
+  [1m[35m (38.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:47871/posts/17
+Completed 302 Found in 47ms (ActiveRecord: 39.2ms)
+
+
+Started GET "/posts/17" for 70.123.204.236 at 2020-06-26 20:27:24 +0000
+Cannot render console from 70.123.204.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.8ms)
+
+
