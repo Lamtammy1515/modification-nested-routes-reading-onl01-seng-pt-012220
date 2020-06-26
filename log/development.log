@@ -3959,3 +3959,14 @@ Redirected to http://67.205.188.72:47871/posts/18
 Completed 302 Found in 81ms (ActiveRecord: 7.7ms)
 
 
+Started GET "/posts/18" for 70.123.204.236 at 2020-06-26 20:31:22 +0000
+Cannot render console from 70.123.204.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 1.5ms)
+
+
