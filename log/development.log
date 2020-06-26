@@ -3945,3 +3945,17 @@ Processing by PostsController#new as HTML
   Rendering posts/new.html.erb within layouts/application
   Rendered posts/_form.html.erb (5.8ms)
   Rendered posts/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/posts" for 70.123.204.236 at 2020-06-26 20:31:22 +0000
+Cannot render console from 70.123.204.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yz1m5rUWDSm45eVHbUeyPjwvkKeuTuviYP691QhEC5h+vz2CvzENtYxQcrkzc7QaATdIi8WkeGuV+FDi6H0fIQ==", "post"=>{"author_id"=>"4", "title"=>"Sunshine", "description"=>"The sun is shining very bright today!"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Sunshine"], ["description", "The sun is shining very bright today!"], ["created_at", "2020-06-26 20:31:22.551673"], ["updated_at", "2020-06-26 20:31:22.551673"], ["author_id", 4]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.188.72:47871/posts/18
+Completed 302 Found in 81ms (ActiveRecord: 7.7ms)
+
+
